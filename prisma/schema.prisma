@@ -1,0 +1,23 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  // previewFeatures = []
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+// 用户表
+model User {
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  nickName  String?
+  gender    Int?
+  avatarUrl String?
+}
