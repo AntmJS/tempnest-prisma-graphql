@@ -4,7 +4,8 @@ const config: Config = {
   graphql: {
     playgroundEnabled: true,
     debug: true,
-    schemaDestination: '../temptaro-apollo-graphql/schema.graphql',
+    schemaDestination: './schema.graphql',
+    // schemaDestination: '../temptaro-apollo-graphql/schema.graphql',
     sortSchema: true,
   },
   security: {
